@@ -14,10 +14,40 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tf6-mz-Ndd">
+                                <rect key="frame" x="0.0" y="321" width="414" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Угадайка"/>
+                                <connections>
+                                    <action selector="showGame1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bVB-d9-WyU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRD-5Q-7ZL">
+                                <rect key="frame" x="0.0" y="431" width="414" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Угадайка 2"/>
+                                <connections>
+                                    <action selector="showGame2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NBR-56-fiO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hRD-5Q-7ZL" firstAttribute="top" secondItem="Tf6-mz-Ndd" secondAttribute="bottom" constant="68" id="3bB-6k-pjn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hRD-5Q-7ZL" secondAttribute="trailing" id="CCV-gD-pRq"/>
+                            <constraint firstItem="Tf6-mz-Ndd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="arc-Oz-0t2"/>
+                            <constraint firstItem="hRD-5Q-7ZL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k1T-lo-R43"/>
+                            <constraint firstItem="Tf6-mz-Ndd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="233" id="kCo-qj-iaF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tf6-mz-Ndd" secondAttribute="trailing" id="zd0-ZF-XQR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="pxg-Uo-9zM"/>
+                    <connections>
+                        <outlet property="guessButton" destination="Tf6-mz-Ndd" id="CIZ-zh-vu2"/>
+                        <outlet property="secondGuessButton" destination="hRD-5Q-7ZL" id="O9v-4m-ZUq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
