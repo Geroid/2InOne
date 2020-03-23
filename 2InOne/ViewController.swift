@@ -9,12 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var guessButton: UIButton!
+    @IBOutlet var secondGuessButton: UIButton!
+    
+    let simpleGameController = SimpleGameViewController()
+    let game2ViewController = Game2ViewController.instantiate()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(patternImage: UIImage(imageLiteralResourceName: "mainScreen"))
     }
-
-
+    
+    @IBAction func showGame1(_ sender: Any) {
+        // work with nib/xib
+        navigationController?.pushViewController(simpleGameController, animated: true)
+    }
+    
+    @IBAction func showGame2(_ sender: Any) {
+        // work with storyboard
+        navigationController?.pushViewController(game2ViewController, animated: true)
+    }
 }
 
