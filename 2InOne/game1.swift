@@ -53,7 +53,7 @@ class Game1 {
                 alert.title = ":("
                 alert.message = "This number is so small"
                 tryCount += 1
-                 setText(triesLabel: triesLabel)
+                setText(triesLabel: triesLabel)
             }
         }
         alert.addAction(UIAlertAction(title: "Ok", style: .default))
