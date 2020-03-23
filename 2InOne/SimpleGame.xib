@@ -10,7 +10,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SimpleGameViewController" customModule="_InOne" customModuleProvider="target">
             <connections>
                 <outlet property="test" destination="TC5-p1-rpt" id="USD-CE-5hl"/>
+<<<<<<< HEAD
                 <outlet property="triesCount" destination="mX1-uw-6se" id="sgP-SW-Y8T"/>
+=======
+>>>>>>> 80e6ab916f3450bc6ac6273f697d6a686e24ce90
                 <outlet property="usersNumber" destination="OEH-94-WDe" id="d4N-oK-JlW"/>
                 <outlet property="view" destination="iN0-l3-epB" id="xOn-bb-xcZ"/>
             </connections>
@@ -21,19 +24,28 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBA-7b-ynM">
+<<<<<<< HEAD
                     <rect key="frame" x="0.0" y="242" width="414" height="30"/>
+=======
+                    <rect key="frame" x="0.0" y="202" width="414" height="30"/>
+>>>>>>> 80e6ab916f3450bc6ac6273f697d6a686e24ce90
                     <state key="normal" title="Ok"/>
                     <connections>
                         <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="Uxj-jh-YW6"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your number:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TC5-p1-rpt">
+<<<<<<< HEAD
                     <rect key="frame" x="0.0" y="114" width="414" height="30"/>
+=======
+                    <rect key="frame" x="0.0" y="74" width="414" height="30"/>
+>>>>>>> 80e6ab916f3450bc6ac6273f697d6a686e24ce90
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OEH-94-WDe">
+<<<<<<< HEAD
                     <rect key="frame" x="50" y="174" width="314" height="38"/>
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <textInputTraits key="textInputTraits"/>
@@ -44,20 +56,33 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+=======
+                    <rect key="frame" x="50" y="134" width="314" height="38"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+>>>>>>> 80e6ab916f3450bc6ac6273f697d6a686e24ce90
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="OEH-94-WDe" firstAttribute="top" secondItem="TC5-p1-rpt" secondAttribute="bottom" constant="30" id="1yV-ZZ-rGF"/>
+<<<<<<< HEAD
                 <constraint firstItem="mX1-uw-6se" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Df3-cq-RS0"/>
+=======
+>>>>>>> 80e6ab916f3450bc6ac6273f697d6a686e24ce90
                 <constraint firstItem="OEH-94-WDe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="DiA-us-De6"/>
                 <constraint firstItem="TC5-p1-rpt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="EVA-LD-UzU"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TC5-p1-rpt" secondAttribute="trailing" id="IP0-Bz-5LR"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JBA-7b-ynM" secondAttribute="trailing" id="J7r-0W-fTu"/>
                 <constraint firstItem="JBA-7b-ynM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="O3z-Ug-Tea"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OEH-94-WDe" secondAttribute="trailing" constant="50" id="aQt-so-fOC"/>
+<<<<<<< HEAD
                 <constraint firstItem="mX1-uw-6se" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="hto-Kc-H76"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mX1-uw-6se" secondAttribute="trailing" constant="20" id="nHO-55-NQL"/>
                 <constraint firstItem="TC5-p1-rpt" firstAttribute="top" secondItem="mX1-uw-6se" secondAttribute="bottom" constant="20" id="qWl-mK-aUk"/>
+=======
+                <constraint firstItem="TC5-p1-rpt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="gUa-Sq-ztk"/>
+>>>>>>> 80e6ab916f3450bc6ac6273f697d6a686e24ce90
                 <constraint firstItem="JBA-7b-ynM" firstAttribute="top" secondItem="OEH-94-WDe" secondAttribute="bottom" constant="30" id="vTz-T7-bCs"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

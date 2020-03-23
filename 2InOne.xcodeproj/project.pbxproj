@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		920B4E092428FADD0013B604 /* Game1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920B4E082428FADD0013B604 /* Game1.swift */; };
 		922E7CF324290ACB002FCE2F /* SimpleGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922E7CF224290ACB002FCE2F /* SimpleGameViewController.swift */; };
+=======
+		E727A6862423B30F00E9BE5B /* SimpleGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E727A6852423B30F00E9BE5B /* SimpleGameViewController.swift */; };
+>>>>>>> 80e6ab916f3450bc6ac6273f697d6a686e24ce90
 		E727A6882423BB9B00E9BE5B /* Game2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E727A6872423BB9B00E9BE5B /* Game2.storyboard */; };
 		E727A68C242412E300E9BE5B /* Game2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E727A68B242412E300E9BE5B /* Game2ViewController.swift */; };
 		E76943B72422BAB600CABAB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76943B62422BAB600CABAB0 /* AppDelegate.swift */; };
@@ -21,8 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
 		920B4E082428FADD0013B604 /* Game1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game1.swift; sourceTree = "<group>"; };
 		922E7CF224290ACB002FCE2F /* SimpleGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGameViewController.swift; sourceTree = "<group>"; };
+=======
+		E727A6852423B30F00E9BE5B /* SimpleGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleGameViewController.swift; sourceTree = "<group>"; };
+>>>>>>> 80e6ab916f3450bc6ac6273f697d6a686e24ce90
 		E727A6872423BB9B00E9BE5B /* Game2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game2.storyboard; sourceTree = "<group>"; };
 		E727A68B242412E300E9BE5B /* Game2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2ViewController.swift; sourceTree = "<group>"; };
 		E76943B32422BAB600CABAB0 /* 2InOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2InOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,7 +85,14 @@
 				E76943B82422BAB600CABAB0 /* SceneDelegate.swift */,
 				E76943BF2422BABB00CABAB0 /* Assets.xcassets */,
 				E76943C42422BABB00CABAB0 /* Info.plist */,
+<<<<<<< HEAD
 				920B4E082428FADD0013B604 /* Game1.swift */,
+=======
+				E76943CC2422BF3600CABAB0 /* SimpleGame.xib */,
+				E727A6852423B30F00E9BE5B /* SimpleGameViewController.swift */,
+				E727A6872423BB9B00E9BE5B /* Game2.storyboard */,
+				E727A68B242412E300E9BE5B /* Game2ViewController.swift */,
+>>>>>>> 80e6ab916f3450bc6ac6273f697d6a686e24ce90
 			);
 			path = 2InOne;
 			sourceTree = "<group>";
@@ -155,9 +170,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E727A6862423B30F00E9BE5B /* SimpleGameViewController.swift in Sources */,
 				E76943BB2422BAB600CABAB0 /* ViewController.swift in Sources */,
 				E727A68C242412E300E9BE5B /* Game2ViewController.swift in Sources */,
+<<<<<<< HEAD
 				922E7CF324290ACB002FCE2F /* SimpleGameViewController.swift in Sources */,
+=======
+>>>>>>> 80e6ab916f3450bc6ac6273f697d6a686e24ce90
 				E76943B72422BAB600CABAB0 /* AppDelegate.swift in Sources */,
 				E76943B92422BAB600CABAB0 /* SceneDelegate.swift in Sources */,
 				920B4E092428FADD0013B604 /* Game1.swift in Sources */,

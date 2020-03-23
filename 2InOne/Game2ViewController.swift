@@ -21,7 +21,13 @@ class Game2ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         self.view.backgroundColor = UIColor(patternImage: UIImage(imageLiteralResourceName: "game2Screen"))
+=======
+        let backgroundImage = UIImage(named: "game2Screen")
+        self.view.backgroundColor = UIColor(patternImage: backgroundImage!)
+        // Do any additional setup after loading the view.
+>>>>>>> 80e6ab916f3450bc6ac6273f697d6a686e24ce90
     }
     
     static func instantiate() -> Game2ViewController {
