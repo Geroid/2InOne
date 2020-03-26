@@ -15,7 +15,7 @@ class Game1 {
     var tryCount = 0
     
     private func generateRandomNumber() {
-        guessNumber = Int.random(in: 0...10)
+        guessNumber = Int.random(in: 0...100)
     }
     
     func startGame()
