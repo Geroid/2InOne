@@ -33,11 +33,15 @@ class SimpleGameViewController: UIViewController {
     
     
     @IBAction func buttonTapped(_ sender: UIButton) {
-        guard let usersNumb = Int(usersNumber.text ?? "0") else {
-            return
-        }
         let alert: UIAlertController!
         alert =  UIAlertController(title: "", message: "", preferredStyle: .alert)
+        guard let usersNumb = Int(usersNumber.text ?? "0") else {
+            alert.title = "Error"
+            alert.message = "Enter the number!"
+            alert.addAction(UIAlertAction(title: "Ok", style: .default))
+            self.present(alert, animated: true)
+            return
+        }
         game1.checkInputNumber(inputNumber: usersNumb, alert: alert, triesLabel: triesCount)
         self.present(alert, animated: true)
     }

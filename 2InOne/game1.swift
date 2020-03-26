@@ -15,14 +15,14 @@ class Game1 {
     var tryCount = 0
     
     private func generateRandomNumber() {
-        guessNumber = Int.random(in: 0...5)
+        guessNumber = Int.random(in: 0...10)
     }
     
     func startGame()
     {
         generateRandomNumber()
     }
-    
+    // Явно такого быть не должно
     func restartGame(triesLabel: UILabel)
     {
         tryCount = 0
