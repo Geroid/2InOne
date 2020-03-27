@@ -10,42 +10,41 @@ import UIKit
 
 class Game2ViewController: UIViewController {
     
-    @IBOutlet var mainTitle: UILabel!
-    @IBOutlet var usersNumberLabel: UILabel!
-    @IBOutlet var triesLabel: UILabel!
-    @IBOutlet var greaterButton: UIButton!
-    @IBOutlet var lessButton: UIButton!
-    @IBOutlet var rightButton: UIButton!
+    @IBOutlet private var mainTitle: UILabel!
+    @IBOutlet private var usersNumberLabel: UILabel!
+    @IBOutlet private var triesLabel: UILabel!
+    @IBOutlet private var greaterButton: UIButton!
+    @IBOutlet private var lessButton: UIButton!
+    @IBOutlet private var rightButton: UIButton!
     
-    var guessNumber = -1
-    var left = 1
-    var right = 1_000_000
-    var tryNumber = 0
+    private var guessNumber = -1
+    private var left = 1
+    private var right = 1_000_000
+    private var tryNumber = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(imageLiteralResourceName: "game2Screen"))
         startGame2()
     }
     
-    func findTheGuessNumber() {
+    private func findTheGuessNumber() {
         guessNumber = (left + right) / 2
         tryNumber += 1
         setText(userNumber: usersNumberLabel, tries: triesLabel)
     }
     
-    func setText(userNumber: UILabel, tries: UILabel){
+    private func setText(userNumber: UILabel, tries: UILabel) {
         userNumber.text = "Your number is \(guessNumber)"
         tries.text = "Tries: \(tryNumber)"
         
     }
     
-    func startGame2(){
+    func startGame2() {
         findTheGuessNumber()
         setText(userNumber: usersNumberLabel, tries: triesLabel)
     }
     
-    func restartGame2(){
+    func restartGame2() {
         tryNumber = 0
         left = 1
         right = 1_000_000
@@ -57,21 +56,28 @@ class Game2ViewController: UIViewController {
         return UIStoryboard(name: "Game2", bundle: nil).instantiateViewController(withIdentifier: "Game2ViewController") as! Game2ViewController
     }
     
-    @IBAction func onGreaterButtonClick(_ sender: UIButton) {
+    @IBAction private func didTouchGreeter(_ sender: UIButton) {
         left = guessNumber + 1
         findTheGuessNumber()
     }
     
-    @IBAction func onLessButtonClick(_ sender: UIButton) {
+    @IBAction private func didTouchLess(_ sender: UIButton) {
         right = guessNumber - 1
         findTheGuessNumber()
     }
     
-    @IBAction func onRightButtonClick(_ sender: UIButton) {
-        let alert = UIAlertController(title: "YEAH!", message: "Machine is so smart", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OMG", style: .default))
-        alert.addAction(UIAlertAction(title: "Restart", style: .default, handler: {
-            action in self.restartGame2() }))
+    @IBAction private func didTouchRight(_ sender: UIButton) {
+        let alert = UIAlertController(
+            title: "YEAH!",
+            message: "Machine is so smart",
+            preferredStyle: .alert
+        )
+        let omgAction = UIAlertAction(title: "OMG", style: .default)
+        let restartAction = UIAlertAction(title: "Restart", style: .default) {
+            action in self.restartGame2()
+        }
+        alert.addAction(omgAction)
+        alert.addAction(restartAction)
         self.present(alert, animated: true)
     }
 }

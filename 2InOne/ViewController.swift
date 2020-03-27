@@ -10,16 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var guessButton: UIButton!
-    @IBOutlet var secondGuessButton: UIButton!
+    @IBOutlet private var guessButton: UIButton!
+    @IBOutlet private var secondGuessButton: UIButton!
     
-    let simpleGameController = SimpleGameViewController()
-    let game2ViewController = Game2ViewController.instantiate()
+    private let simpleGameController = SimpleGameViewController()
+    private let game2ViewController = Game2ViewController.instantiate()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(imageLiteralResourceName: "mainScreen"))
     }
     
     @IBAction func showGame1(_ sender: Any) {

@@ -15,6 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game2Screen" translatesAutoresizingMaskIntoConstraints="NO" id="YW7-fd-pn5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="WtN-OS-hGA">
                                 <rect key="frame" x="0.0" y="76" width="414" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -32,7 +35,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Greater"/>
                                 <connections>
-                                    <action selector="onGreaterButtonClick:" destination="7dI-Yx-h7m" eventType="touchUpInside" id="mkt-lK-epL"/>
+                                    <action selector="didTouchGreeter:" destination="7dI-Yx-h7m" eventType="touchUpInside" id="mkt-lK-epL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6R-Hq-0D2">
@@ -40,7 +43,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Less"/>
                                 <connections>
-                                    <action selector="onLessButtonClick:" destination="7dI-Yx-h7m" eventType="touchUpInside" id="uiG-hO-TUs"/>
+                                    <action selector="didTouchLess:" destination="7dI-Yx-h7m" eventType="touchUpInside" id="uiG-hO-TUs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thc-zX-Mya">
@@ -48,7 +51,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Right!"/>
                                 <connections>
-                                    <action selector="onRightButtonClick:" destination="7dI-Yx-h7m" eventType="touchUpInside" id="R7h-UM-t9o"/>
+                                    <action selector="didTouchRight:" destination="7dI-Yx-h7m" eventType="touchUpInside" id="R7h-UM-t9o"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tries" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="dWx-gv-SFd">
@@ -65,6 +68,7 @@
                             <constraint firstItem="nw0-a0-GM2" firstAttribute="top" secondItem="WtN-OS-hGA" secondAttribute="bottom" constant="32" id="8KD-xp-CCy"/>
                             <constraint firstItem="ESB-bi-OEL" firstAttribute="trailing" secondItem="WtN-OS-hGA" secondAttribute="trailing" id="8vU-95-MFp"/>
                             <constraint firstItem="dWx-gv-SFd" firstAttribute="leading" secondItem="ESB-bi-OEL" secondAttribute="leading" id="Azd-WW-pEl"/>
+                            <constraint firstItem="YW7-fd-pn5" firstAttribute="trailing" secondItem="ESB-bi-OEL" secondAttribute="trailing" id="BX0-AZ-Wws"/>
                             <constraint firstItem="ESB-bi-OEL" firstAttribute="trailing" secondItem="thc-zX-Mya" secondAttribute="trailing" id="Bhj-rm-u3H"/>
                             <constraint firstItem="WtN-OS-hGA" firstAttribute="leading" secondItem="ESB-bi-OEL" secondAttribute="leading" id="Ge6-ks-X8n"/>
                             <constraint firstItem="thc-zX-Mya" firstAttribute="leading" secondItem="ESB-bi-OEL" secondAttribute="leading" id="Jf3-LU-rOk"/>
@@ -73,9 +77,12 @@
                             <constraint firstItem="Y6R-Hq-0D2" firstAttribute="leading" secondItem="ESB-bi-OEL" secondAttribute="leading" id="ViF-UI-yuW"/>
                             <constraint firstItem="rCw-1h-Zoa" firstAttribute="top" secondItem="dWx-gv-SFd" secondAttribute="bottom" constant="32" id="bES-1d-hCd"/>
                             <constraint firstItem="ESB-bi-OEL" firstAttribute="trailing" secondItem="nw0-a0-GM2" secondAttribute="trailing" id="bNm-BM-SwB"/>
+                            <constraint firstItem="YW7-fd-pn5" firstAttribute="top" secondItem="sWv-O8-ini" secondAttribute="top" id="gfS-4V-rov"/>
                             <constraint firstItem="nw0-a0-GM2" firstAttribute="leading" secondItem="ESB-bi-OEL" secondAttribute="leading" id="hGY-wr-XIS"/>
                             <constraint firstItem="ESB-bi-OEL" firstAttribute="trailing" secondItem="rCw-1h-Zoa" secondAttribute="trailing" id="iwp-Lg-jUF"/>
+                            <constraint firstItem="YW7-fd-pn5" firstAttribute="leading" secondItem="ESB-bi-OEL" secondAttribute="leading" id="oSJ-2t-87e"/>
                             <constraint firstItem="thc-zX-Mya" firstAttribute="top" secondItem="Y6R-Hq-0D2" secondAttribute="bottom" constant="20" id="sGK-jl-LoQ"/>
+                            <constraint firstAttribute="bottom" secondItem="YW7-fd-pn5" secondAttribute="bottom" id="spV-Pb-HPb"/>
                             <constraint firstItem="rCw-1h-Zoa" firstAttribute="leading" secondItem="ESB-bi-OEL" secondAttribute="leading" id="vEN-vD-jzT"/>
                             <constraint firstItem="dWx-gv-SFd" firstAttribute="trailing" secondItem="ESB-bi-OEL" secondAttribute="trailing" id="wCx-T3-gaA"/>
                         </constraints>
@@ -92,7 +99,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X4X-bQ-u7H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="131"/>
+            <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="game2Screen" width="1920" height="2905"/>
+    </resources>
 </document>

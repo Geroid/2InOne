@@ -18,42 +18,42 @@ class Game1 {
         guessNumber = Int.random(in: 0...5)
     }
     
-    func startGame()
-    {
+    func startGame() {
         generateRandomNumber()
     }
     
-    func restartGame(triesLabel: UILabel)
-    {
+    func restartGame(triesLabel: UILabel) {
         tryCount = 0
         generateRandomNumber()
-        setText(triesLabel: triesLabel)
+//        setText()
     }
     
-    func setText(triesLabel: UILabel)
-    {
-        triesLabel.text = "Tries: \(tryCount)"
+    func setText() -> String {
+        let text = "Tries: \(tryCount)"
+        return text
     }
     
-    func checkInputNumber(inputNumber: Int, alert: UIAlertController, triesLabel: UILabel) {
+    func checkInputNumber(inputNumber: Int,
+                          alert: UIAlertController,
+                          triesLabel: UILabel) {
         if inputNumber == guessNumber {
             alert.title = "YEAH!"
             alert.message = "You Win!"
             tryCount += 1
-            setText(triesLabel: triesLabel)
+            triesLabel.text = setText()
             restartGame(triesLabel: triesLabel)
         } else {
             if inputNumber > guessNumber {
                 alert.title =  ":("
                 alert.message = "This number is so big"
                 tryCount += 1
-                setText(triesLabel: triesLabel)
+                triesLabel.text = setText()
                 
             } else {
                 alert.title = ":("
                 alert.message = "This number is so small"
                 tryCount += 1
-                setText(triesLabel: triesLabel)
+                triesLabel.text = setText()
             }
         }
         alert.addAction(UIAlertAction(title: "Ok", style: .default))

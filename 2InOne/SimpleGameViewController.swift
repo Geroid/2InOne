@@ -27,7 +27,6 @@ class SimpleGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(imageLiteralResourceName: "game1Screen"))
         game1.startGame()
     }
     

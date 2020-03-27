@@ -20,6 +20,9 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game1Screen" translatesAutoresizingMaskIntoConstraints="NO" id="VwS-LO-hiT">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBA-7b-ynM">
                     <rect key="frame" x="0.0" y="243.5" width="414" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -49,15 +52,19 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="OEH-94-WDe" firstAttribute="top" secondItem="TC5-p1-rpt" secondAttribute="bottom" constant="30" id="1yV-ZZ-rGF"/>
+                <constraint firstAttribute="trailing" secondItem="VwS-LO-hiT" secondAttribute="trailing" id="Ay5-0c-aAk"/>
                 <constraint firstItem="mX1-uw-6se" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Df3-cq-RS0"/>
                 <constraint firstItem="OEH-94-WDe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="DiA-us-De6"/>
+                <constraint firstItem="VwS-LO-hiT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ELZ-6R-GSX"/>
                 <constraint firstItem="TC5-p1-rpt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="EVA-LD-UzU"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TC5-p1-rpt" secondAttribute="trailing" id="IP0-Bz-5LR"/>
+                <constraint firstAttribute="bottom" secondItem="VwS-LO-hiT" secondAttribute="bottom" id="IfK-7E-Lkc"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JBA-7b-ynM" secondAttribute="trailing" id="J7r-0W-fTu"/>
                 <constraint firstItem="JBA-7b-ynM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="O3z-Ug-Tea"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OEH-94-WDe" secondAttribute="trailing" constant="50" id="aQt-so-fOC"/>
                 <constraint firstItem="mX1-uw-6se" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="hto-Kc-H76"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mX1-uw-6se" secondAttribute="trailing" constant="20" id="nHO-55-NQL"/>
+                <constraint firstItem="VwS-LO-hiT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qNY-XE-J4T"/>
                 <constraint firstItem="TC5-p1-rpt" firstAttribute="top" secondItem="mX1-uw-6se" secondAttribute="bottom" constant="20" id="qWl-mK-aUk"/>
                 <constraint firstItem="JBA-7b-ynM" firstAttribute="top" secondItem="OEH-94-WDe" secondAttribute="bottom" constant="30" id="vTz-T7-bCs"/>
             </constraints>
@@ -65,4 +72,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
         </view>
     </objects>
+    <resources>
+        <image name="game1Screen" width="1920" height="2963"/>
+    </resources>
 </document>
