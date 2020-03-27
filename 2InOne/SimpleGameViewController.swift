@@ -9,7 +9,6 @@
 import UIKit
 
 class SimpleGameViewController: UIViewController {
-
     
     @IBOutlet weak var test: UILabel!
     @IBOutlet weak var usersNumber: UITextField!
@@ -19,7 +18,7 @@ class SimpleGameViewController: UIViewController {
     
     init() {
         super.init(nibName: "SimpleGame", bundle: nil)
-
+        
     }
     required init?(coder: NSCoder) {
         super.init(nibName: "SimpleGame", bundle: nil)
@@ -29,7 +28,6 @@ class SimpleGameViewController: UIViewController {
         super.viewDidLoad()
         game1.startGame()
     }
-    
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         let alert: UIAlertController!

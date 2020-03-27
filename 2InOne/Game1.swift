@@ -11,6 +11,7 @@ import UIKit
 
 
 class Game1 {
+    
     private var guessNumber = 0
     var tryCount = 0
     
@@ -22,13 +23,13 @@ class Game1 {
         generateRandomNumber()
     }
     
-    func restartGame(triesLabel: UILabel) {
+    func restartGame() {
         tryCount = 0
         generateRandomNumber()
-//        setText()
+        //        setText()
     }
     
-    func setText() -> String {
+    private func setText() -> String {
         let text = "Tries: \(tryCount)"
         return text
     }
@@ -41,7 +42,7 @@ class Game1 {
             alert.message = "You Win!"
             tryCount += 1
             triesLabel.text = setText()
-            restartGame(triesLabel: triesLabel)
+            restartGame()
         } else {
             if inputNumber > guessNumber {
                 alert.title =  ":("

@@ -73,8 +73,9 @@ class Game2ViewController: UIViewController {
             preferredStyle: .alert
         )
         let omgAction = UIAlertAction(title: "OMG", style: .default)
-        let restartAction = UIAlertAction(title: "Restart", style: .default) {
-            action in self.restartGame2()
+        let restartAction = UIAlertAction(title: "Restart",style: .default)
+        { action in
+            self.restartGame2()
         }
         alert.addAction(omgAction)
         alert.addAction(restartAction)
