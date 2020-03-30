@@ -14,6 +14,7 @@ class Game1 {
     
     private var guessNumber = 0
     var tryCount = 0
+    var recordsGame: [Int: Int] = [:]
     
     private func generateRandomNumber() {
         guessNumber = Int.random(in: 0...5)
@@ -36,13 +37,13 @@ class Game1 {
     
     func checkInputNumber(inputNumber: Int,
                           alert: UIAlertController,
-                          triesLabel: UILabel) {
+                          triesLabel: UILabel) -> [Int: Int] {
         if inputNumber == guessNumber {
             alert.title = "YEAH!"
             alert.message = "You Win!"
             tryCount += 1
             triesLabel.text = setText()
-            restartGame()
+            recordsGame.updateValue(tryCount, forKey: guessNumber)
         } else {
             if inputNumber > guessNumber {
                 alert.title =  ":("
@@ -58,5 +59,6 @@ class Game1 {
             }
         }
         alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        return recordsGame
     }
 }

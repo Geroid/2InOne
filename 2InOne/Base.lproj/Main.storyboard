@@ -20,29 +20,49 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tf6-mz-Ndd">
                                 <rect key="frame" x="0.0" y="321" width="414" height="42"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Угадайка"/>
+                                <state key="normal" title="Угадайка">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="showGame1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bVB-d9-WyU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRD-5Q-7ZL">
-                                <rect key="frame" x="0.0" y="431" width="414" height="42"/>
+                                <rect key="frame" x="0.0" y="373" width="414" height="42"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Угадайка 2"/>
+                                <state key="normal" title="Угадайка 2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="showGame2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NBR-56-fiO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmp-re-DVz">
+                                <rect key="frame" x="0.0" y="425" width="414" height="42"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Results">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="showResults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Dn-jw-GKq"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="2az-vp-y9u" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2qL-OV-AVl"/>
-                            <constraint firstItem="hRD-5Q-7ZL" firstAttribute="top" secondItem="Tf6-mz-Ndd" secondAttribute="bottom" constant="68" id="3bB-6k-pjn"/>
+                            <constraint firstItem="hRD-5Q-7ZL" firstAttribute="top" secondItem="Tf6-mz-Ndd" secondAttribute="bottom" constant="10" id="3bB-6k-pjn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hRD-5Q-7ZL" secondAttribute="trailing" id="CCV-gD-pRq"/>
+                            <constraint firstItem="vmp-re-DVz" firstAttribute="top" secondItem="hRD-5Q-7ZL" secondAttribute="bottom" constant="10" id="Hue-GV-l8V"/>
                             <constraint firstAttribute="bottom" secondItem="2az-vp-y9u" secondAttribute="bottom" id="SpK-uh-cpw"/>
                             <constraint firstItem="Tf6-mz-Ndd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="arc-Oz-0t2"/>
+                            <constraint firstItem="vmp-re-DVz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="flh-Q5-GjC"/>
                             <constraint firstItem="2az-vp-y9u" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="h2E-Yp-tPD"/>
+                            <constraint firstItem="vmp-re-DVz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hmS-yS-4QD"/>
                             <constraint firstItem="2az-vp-y9u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="i6T-fL-k6k"/>
                             <constraint firstItem="hRD-5Q-7ZL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k1T-lo-R43"/>
                             <constraint firstItem="Tf6-mz-Ndd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="233" id="kCo-qj-iaF"/>
@@ -53,6 +73,7 @@
                     <navigationItem key="navigationItem" id="pxg-Uo-9zM"/>
                     <connections>
                         <outlet property="guessButton" destination="Tf6-mz-Ndd" id="CIZ-zh-vu2"/>
+                        <outlet property="results" destination="vmp-re-DVz" id="lG5-VE-9il"/>
                         <outlet property="secondGuessButton" destination="hRD-5Q-7ZL" id="O9v-4m-ZUq"/>
                     </connections>
                 </viewController>

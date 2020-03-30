@@ -18,20 +18,14 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game2Screen" translatesAutoresizingMaskIntoConstraints="NO" id="YW7-fd-pn5">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="WtN-OS-hGA">
-                                <rect key="frame" x="0.0" y="76" width="414" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="nw0-a0-GM2">
-                                <rect key="frame" x="0.0" y="138" width="414" height="30"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCw-1h-Zoa">
-                                <rect key="frame" x="0.0" y="262" width="414" height="42"/>
+                                <rect key="frame" x="0.0" y="188" width="414" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Greater"/>
                                 <connections>
@@ -39,7 +33,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6R-Hq-0D2">
-                                <rect key="frame" x="0.0" y="324" width="414" height="42"/>
+                                <rect key="frame" x="0.0" y="250" width="414" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Less"/>
                                 <connections>
@@ -47,7 +41,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thc-zX-Mya">
-                                <rect key="frame" x="0.0" y="386" width="414" height="42"/>
+                                <rect key="frame" x="0.0" y="312" width="414" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Right!"/>
                                 <connections>
@@ -55,7 +49,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tries" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="dWx-gv-SFd">
-                                <rect key="frame" x="0.0" y="200" width="414" height="30"/>
+                                <rect key="frame" x="0.0" y="126" width="414" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -63,17 +57,14 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="WtN-OS-hGA" firstAttribute="top" secondItem="ESB-bi-OEL" secondAttribute="top" constant="32" id="1mb-XT-RQg"/>
                             <constraint firstItem="dWx-gv-SFd" firstAttribute="top" secondItem="nw0-a0-GM2" secondAttribute="bottom" constant="32" id="2SD-8p-Dmz"/>
-                            <constraint firstItem="nw0-a0-GM2" firstAttribute="top" secondItem="WtN-OS-hGA" secondAttribute="bottom" constant="32" id="8KD-xp-CCy"/>
-                            <constraint firstItem="ESB-bi-OEL" firstAttribute="trailing" secondItem="WtN-OS-hGA" secondAttribute="trailing" id="8vU-95-MFp"/>
                             <constraint firstItem="dWx-gv-SFd" firstAttribute="leading" secondItem="ESB-bi-OEL" secondAttribute="leading" id="Azd-WW-pEl"/>
                             <constraint firstItem="YW7-fd-pn5" firstAttribute="trailing" secondItem="ESB-bi-OEL" secondAttribute="trailing" id="BX0-AZ-Wws"/>
                             <constraint firstItem="ESB-bi-OEL" firstAttribute="trailing" secondItem="thc-zX-Mya" secondAttribute="trailing" id="Bhj-rm-u3H"/>
-                            <constraint firstItem="WtN-OS-hGA" firstAttribute="leading" secondItem="ESB-bi-OEL" secondAttribute="leading" id="Ge6-ks-X8n"/>
                             <constraint firstItem="thc-zX-Mya" firstAttribute="leading" secondItem="ESB-bi-OEL" secondAttribute="leading" id="Jf3-LU-rOk"/>
                             <constraint firstItem="ESB-bi-OEL" firstAttribute="trailing" secondItem="Y6R-Hq-0D2" secondAttribute="trailing" id="MBf-4g-hac"/>
                             <constraint firstItem="Y6R-Hq-0D2" firstAttribute="top" secondItem="rCw-1h-Zoa" secondAttribute="bottom" constant="20" id="RJ0-Bh-Rai"/>
+                            <constraint firstItem="nw0-a0-GM2" firstAttribute="top" secondItem="ESB-bi-OEL" secondAttribute="top" constant="20" id="VNg-il-5bP"/>
                             <constraint firstItem="Y6R-Hq-0D2" firstAttribute="leading" secondItem="ESB-bi-OEL" secondAttribute="leading" id="ViF-UI-yuW"/>
                             <constraint firstItem="rCw-1h-Zoa" firstAttribute="top" secondItem="dWx-gv-SFd" secondAttribute="bottom" constant="32" id="bES-1d-hCd"/>
                             <constraint firstItem="ESB-bi-OEL" firstAttribute="trailing" secondItem="nw0-a0-GM2" secondAttribute="trailing" id="bNm-BM-SwB"/>
@@ -91,7 +82,6 @@
                     <connections>
                         <outlet property="greaterButton" destination="rCw-1h-Zoa" id="QJw-iK-662"/>
                         <outlet property="lessButton" destination="Y6R-Hq-0D2" id="PR6-67-5wo"/>
-                        <outlet property="mainTitle" destination="WtN-OS-hGA" id="qIR-Xz-0mf"/>
                         <outlet property="rightButton" destination="thc-zX-Mya" id="ztE-Ex-mCh"/>
                         <outlet property="triesLabel" destination="dWx-gv-SFd" id="EbY-Wz-dJY"/>
                         <outlet property="usersNumberLabel" destination="nw0-a0-GM2" id="cdy-W9-JCO"/>

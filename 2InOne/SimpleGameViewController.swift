@@ -18,14 +18,15 @@ class SimpleGameViewController: UIViewController {
     
     init() {
         super.init(nibName: "SimpleGame", bundle: nil)
-        
     }
+    
     required init?(coder: NSCoder) {
         super.init(nibName: "SimpleGame", bundle: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Guessing Game 1"
         game1.startGame()
     }
     
@@ -39,7 +40,7 @@ class SimpleGameViewController: UIViewController {
             self.present(alert, animated: true)
             return
         }
-        game1.checkInputNumber(inputNumber: usersNumb, alert: alert, triesLabel: triesCount)
+        var result = game1.checkInputNumber(inputNumber: usersNumb, alert: alert, triesLabel: triesCount)
         self.present(alert, animated: true)
     }
     

@@ -21,9 +21,11 @@ class Game2ViewController: UIViewController {
     private var left = 1
     private var right = 1_000_000
     private var tryNumber = 0
+    var results: [Int: Int] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Guessing Game 2"
         startGame2()
     }
     
@@ -34,9 +36,8 @@ class Game2ViewController: UIViewController {
     }
     
     private func setText(userNumber: UILabel, tries: UILabel) {
-        userNumber.text = "Your number is \(guessNumber)"
+        userNumber.text = "Your number is \(guessNumber)?"
         tries.text = "Tries: \(tryNumber)"
-        
     }
     
     func startGame2() {
@@ -52,8 +53,13 @@ class Game2ViewController: UIViewController {
         startGame2()
     }
     
+    func showResults() -> [Int: Int]{
+        return results
+    }
+    
     static func instantiate() -> Game2ViewController {
-        return UIStoryboard(name: "Game2", bundle: nil).instantiateViewController(withIdentifier: "Game2ViewController") as! Game2ViewController
+        return UIStoryboard(name: "Game2", bundle: nil)
+            .instantiateViewController(withIdentifier: "Game2ViewController") as! Game2ViewController
     }
     
     @IBAction private func didTouchGreeter(_ sender: UIButton) {
@@ -67,6 +73,7 @@ class Game2ViewController: UIViewController {
     }
     
     @IBAction private func didTouchRight(_ sender: UIButton) {
+        results.updateValue(tryNumber, forKey: guessNumber)
         let alert = UIAlertController(
             title: "YEAH!",
             message: "Machine is so smart",
