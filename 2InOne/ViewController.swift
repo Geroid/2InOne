@@ -10,20 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: Outlets
     @IBOutlet private var guessButton: UIButton!
     @IBOutlet private var secondGuessButton: UIButton!
     @IBOutlet private var results: UIButton!
     
+    // MARK: Properties
     private let simpleGameController = SimpleGameViewController()
     private let game2ViewController = Game2ViewController.instantiate()
-    private let resultViewController = ResultViewController.instantiate2()
+    private let recordsViewController = RecordsViewController.instantiate2()
     
-    
+    // MARK: Override funcs
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Main Menu"
     }
     
+    // MARK: IBAction funcs
     @IBAction func showGame1(_ sender: Any) {
         // work with nib/xib
         navigationController?.pushViewController(simpleGameController, animated: true)
@@ -35,7 +38,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showResults(_ sender: UIButton) {
-        navigationController?.pushViewController(resultViewController, animated: true)
+        navigationController?.pushViewController(recordsViewController, animated: true)
     }
 }
 

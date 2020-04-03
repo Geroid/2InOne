@@ -10,6 +10,7 @@ import UIKit
 
 class Game2ViewController: UIViewController {
     
+    // MARK: Outlets
     @IBOutlet private var mainTitle: UILabel!
     @IBOutlet private var usersNumberLabel: UILabel!
     @IBOutlet private var triesLabel: UILabel!
@@ -17,18 +18,26 @@ class Game2ViewController: UIViewController {
     @IBOutlet private var lessButton: UIButton!
     @IBOutlet private var rightButton: UIButton!
     
+    // MARK: Properties
     private var guessNumber = -1
     private var left = 1
     private var right = 1_000_000
     private var tryNumber = 0
-    var results: [Int: Int] = [:]
+    private var records = RecordsService.shared
+    private var gameResults = GameResult()
     
+    // MARK: Override funcs
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Guessing Game 2"
         startGame2()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        restartGame2()
+    }
+    
+    // MARK: Private funcs
     private func findTheGuessNumber() {
         guessNumber = (left + right) / 2
         tryNumber += 1
@@ -40,6 +49,7 @@ class Game2ViewController: UIViewController {
         tries.text = "Tries: \(tryNumber)"
     }
     
+    // MARK: Public funcs
     func startGame2() {
         findTheGuessNumber()
         setText(userNumber: usersNumberLabel, tries: triesLabel)
@@ -53,15 +63,13 @@ class Game2ViewController: UIViewController {
         startGame2()
     }
     
-    func showResults() -> [Int: Int]{
-        return results
-    }
     
     static func instantiate() -> Game2ViewController {
         return UIStoryboard(name: "Game2", bundle: nil)
             .instantiateViewController(withIdentifier: "Game2ViewController") as! Game2ViewController
     }
     
+    // MARK: IBAction funcs
     @IBAction private func didTouchGreeter(_ sender: UIButton) {
         left = guessNumber + 1
         findTheGuessNumber()
@@ -73,15 +81,20 @@ class Game2ViewController: UIViewController {
     }
     
     @IBAction private func didTouchRight(_ sender: UIButton) {
-        results.updateValue(tryNumber, forKey: guessNumber)
+        gameResults.number = guessNumber
+        gameResults.tries = tryNumber
         let alert = UIAlertController(
             title: "YEAH!",
             message: "Machine is so smart",
             preferredStyle: .alert
         )
         let omgAction = UIAlertAction(title: "OMG", style: .default)
+        { action in
+            self.records.addResult(self.gameResults)
+        }
         let restartAction = UIAlertAction(title: "Restart",style: .default)
         { action in
+            self.records.addResult(self.gameResults)
             self.restartGame2()
         }
         alert.addAction(omgAction)

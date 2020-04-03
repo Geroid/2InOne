@@ -9,25 +9,16 @@
 import Foundation
 import UIKit
 
-
 class Game1 {
     
+    // MARK: Properties
     private var guessNumber = 0
     var tryCount = 0
-    var recordsGame: [Int: Int] = [:]
+    var record = GameResult()
     
+    // MARK: Private funcs
     private func generateRandomNumber() {
         guessNumber = Int.random(in: 0...5)
-    }
-    
-    func startGame() {
-        generateRandomNumber()
-    }
-    
-    func restartGame() {
-        tryCount = 0
-        generateRandomNumber()
-        //        setText()
     }
     
     private func setText() -> String {
@@ -35,15 +26,26 @@ class Game1 {
         return text
     }
     
+    // MARK: Public funcs
+    func startGame() {
+        generateRandomNumber()
+    }
+    
+    func restartGame() {
+        tryCount = 0
+        generateRandomNumber()
+    }
+    
     func checkInputNumber(inputNumber: Int,
                           alert: UIAlertController,
-                          triesLabel: UILabel) -> [Int: Int] {
+                          triesLabel: UILabel) -> GameResult {
         if inputNumber == guessNumber {
             alert.title = "YEAH!"
             alert.message = "You Win!"
             tryCount += 1
             triesLabel.text = setText()
-            recordsGame.updateValue(tryCount, forKey: guessNumber)
+            record.number = guessNumber
+            record.tries = tryCount
         } else {
             if inputNumber > guessNumber {
                 alert.title =  ":("
@@ -59,6 +61,6 @@ class Game1 {
             }
         }
         alert.addAction(UIAlertAction(title: "Ok", style: .default))
-        return recordsGame
+        return record
     }
 }

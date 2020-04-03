@@ -10,11 +10,14 @@ import UIKit
 
 class SimpleGameViewController: UIViewController {
     
+    // MARK: Outlets
     @IBOutlet weak var test: UILabel!
     @IBOutlet weak var usersNumber: UITextField!
     @IBOutlet weak var triesCount: UILabel!
     
+    // MARK: Properties
     let game1 = Game1()
+    let records = RecordsService.shared
     
     init() {
         super.init(nibName: "SimpleGame", bundle: nil)
@@ -24,12 +27,20 @@ class SimpleGameViewController: UIViewController {
         super.init(nibName: "SimpleGame", bundle: nil)
     }
     
+    // MARK: Override funcs
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Guessing Game 1"
         game1.startGame()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        triesCount.text = "Tries: 0";
+        usersNumber.text = "";
+        game1.restartGame()
+    }
+    
+    // MARK: IBAction funcs
     @IBAction func buttonTapped(_ sender: UIButton) {
         let alert: UIAlertController!
         alert =  UIAlertController(title: "", message: "", preferredStyle: .alert)
@@ -40,7 +51,7 @@ class SimpleGameViewController: UIViewController {
             self.present(alert, animated: true)
             return
         }
-        var result = game1.checkInputNumber(inputNumber: usersNumb, alert: alert, triesLabel: triesCount)
+        records.addResult(game1.checkInputNumber(inputNumber: usersNumb, alert: alert, triesLabel: triesCount))
         self.present(alert, animated: true)
     }
     
