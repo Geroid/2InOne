@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		920B4E092428FADD0013B604 /* Game1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920B4E082428FADD0013B604 /* Game1.swift */; };
+		9224176F2437CCC5004C6258 /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224176E2437CCC5004C6258 /* GameResult.swift */; };
 		922E7CF324290ACB002FCE2F /* SimpleGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922E7CF224290ACB002FCE2F /* SimpleGameViewController.swift */; };
 		928AC85924322EA50083B6CE /* RecordsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928AC85824322EA50083B6CE /* RecordsService.swift */; };
 		92F6B33D242E4F9600ADC3A5 /* Records.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F6B33C242E4F9600ADC3A5 /* Records.storyboard */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		920B4E082428FADD0013B604 /* Game1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game1.swift; sourceTree = "<group>"; };
+		9224176E2437CCC5004C6258 /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
 		922E7CF224290ACB002FCE2F /* SimpleGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGameViewController.swift; sourceTree = "<group>"; };
 		928AC85824322EA50083B6CE /* RecordsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsService.swift; sourceTree = "<group>"; };
 		92F6B33C242E4F9600ADC3A5 /* Records.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Records.storyboard; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				920B4E082428FADD0013B604 /* Game1.swift */,
 				92F6B342242E50AC00ADC3A5 /* RecordsViewController.swift */,
 				928AC85824322EA50083B6CE /* RecordsService.swift */,
+				9224176E2437CCC5004C6258 /* GameResult.swift */,
 			);
 			path = 2InOne;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				E76943B72422BAB600CABAB0 /* AppDelegate.swift in Sources */,
 				E76943B92422BAB600CABAB0 /* SceneDelegate.swift in Sources */,
 				920B4E092428FADD0013B604 /* Game1.swift in Sources */,
+				9224176F2437CCC5004C6258 /* GameResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

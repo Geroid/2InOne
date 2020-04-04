@@ -22,6 +22,8 @@ class RecordsViewController: UIViewController, UITableViewDelegate {
     
     // MARK: Outlets
     @IBOutlet private var tableView: UITableView!
+    @IBOutlet var sortNumberButton: UIButton!
+    @IBOutlet var sortTriesButton: UIButton!
     
     // MARK: Override funcs
     override func viewDidLoad() {
@@ -30,26 +32,34 @@ class RecordsViewController: UIViewController, UITableViewDelegate {
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
+        recordItems = Games.records.results(.game1)
+        tableView.reloadData()
     }
     
     // MARK: Public funcs
     static func instantiate2() -> RecordsViewController {
         return UIStoryboard(name: "Records",
                             bundle: nil).instantiateViewController(withIdentifier: "RecordsViewController") as! RecordsViewController
-        
     }
     
     // MARK: IBAction
     @IBAction private func gameDidChange(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            recordItems = Games.game1.records.results()
+            recordItems = Games.records.results(.game1)
         case 1:
-            view.backgroundColor = .white
-            recordItems = Games.records.results()
+            recordItems = Games.records.results(.game2)
         default:
             view.backgroundColor = .white
         }
+        tableView.reloadData()
+    }
+    
+    @IBAction func didTouchSortNumber(_ sender: UIButton) {
+        tableView.reloadData()
+    }
+    
+    @IBAction func didTouchSortTries(_ sender: UIButton) {
         tableView.reloadData()
     }
 }

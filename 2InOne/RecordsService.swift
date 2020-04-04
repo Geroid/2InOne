@@ -8,30 +8,35 @@
 
 import Foundation
 
-struct GameResult {
-    var number = 0
-    var tries = 0
+enum GameType {
+    case game1
+    case game2
 }
 
 class RecordsService {
     
     // MARK: Properties
     static var shared = RecordsService()
-    private var GameResults: [GameResult] = []
-//    private var resDict: [Int: Int] = [:]
+    private var GameResults: [GameType: [GameResult]] = [.game1: [], .game2: []]
     
     private init() {}
     
     // MARK: Public funcs
-    func addResult (_ resutls: GameResult) {
-        GameResults.append(resutls)
+    func addResult (gameType: GameType, results: GameResult) {
+        guard GameResults[gameType] != nil else {
+            return
+        }
+        GameResults[gameType]!.append(results)
+//        Не работало...
 //        resDict.updateValue(resutls.number, forKey: resutls.tries)
 //        let defaults = UserDefaults.standard
 //        defaults.set(resDict, forKey: "User Results")
 //        defaults.synchronize()
     }
-    func results() -> [GameResult] {
-        
+    func results(_ gameType: GameType) -> [GameResult] {
+        guard GameResults[gameType] != nil else {
+            return []
+        }
 //        let defaults = UserDefaults.standard
 //        guard let savedResults = defaults.object(forKey: "User Results") as? [GameResult] else {
 //            var error = GameResult()
@@ -39,6 +44,6 @@ class RecordsService {
 //            error.tries = -1
 //            return [error]
 //        }
-        return GameResults
+        return GameResults[gameType]!
     }
 }

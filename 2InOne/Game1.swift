@@ -38,7 +38,7 @@ class Game1 {
     
     func checkInputNumber(inputNumber: Int,
                           alert: UIAlertController,
-                          triesLabel: UILabel) -> GameResult {
+                          triesLabel: UILabel) -> GameResult? {
         if inputNumber == guessNumber {
             alert.title = "YEAH!"
             alert.message = "You Win!"
@@ -46,13 +46,14 @@ class Game1 {
             triesLabel.text = setText()
             record.number = guessNumber
             record.tries = tryCount
+            alert.addAction(UIAlertAction(title: "Ok", style: .default))
+            return record
         } else {
             if inputNumber > guessNumber {
                 alert.title =  ":("
                 alert.message = "This number is so big"
                 tryCount += 1
                 triesLabel.text = setText()
-                
             } else {
                 alert.title = ":("
                 alert.message = "This number is so small"
@@ -61,6 +62,6 @@ class Game1 {
             }
         }
         alert.addAction(UIAlertAction(title: "Ok", style: .default))
-        return record
+        return nil
     }
 }

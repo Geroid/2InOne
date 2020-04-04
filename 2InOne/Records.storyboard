@@ -40,28 +40,41 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ilq-mk-6qB">
-                                <rect key="frame" x="10" y="95" width="37" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba2-Nb-oTZ">
+                                <rect key="frame" x="10" y="93" width="89" height="30"/>
+                                <state key="normal" title="Sort Number"/>
+                                <connections>
+                                    <action selector="didTouchSortNumber:" destination="9ue-Ey-9W4" eventType="touchUpInside" id="eXx-kL-LgM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shQ-ZH-qwD">
+                                <rect key="frame" x="337" y="93" width="67" height="30"/>
+                                <state key="normal" title="Sort Tries"/>
+                                <connections>
+                                    <action selector="didTouchSortTries:" destination="9ue-Ey-9W4" eventType="touchUpInside" id="1g2-PO-Ahn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Lx-SH-EFw" firstAttribute="trailing" secondItem="MJh-r1-X6l" secondAttribute="trailing" constant="10" id="3n6-ab-KGt"/>
+                            <constraint firstItem="ba2-Nb-oTZ" firstAttribute="leading" secondItem="6Lx-SH-EFw" secondAttribute="leading" constant="10" id="4yO-YB-e5A"/>
                             <constraint firstItem="MJh-r1-X6l" firstAttribute="top" secondItem="6Lx-SH-EFw" secondAttribute="top" constant="10" id="JB0-eV-v28"/>
-                            <constraint firstItem="Tlw-gY-NZd" firstAttribute="top" secondItem="Ilq-mk-6qB" secondAttribute="bottom" constant="10" id="TXJ-kR-zpY"/>
                             <constraint firstItem="MJh-r1-X6l" firstAttribute="leading" secondItem="6Lx-SH-EFw" secondAttribute="leading" constant="10" id="ToL-M1-jdg"/>
+                            <constraint firstItem="Tlw-gY-NZd" firstAttribute="top" secondItem="ba2-Nb-oTZ" secondAttribute="bottom" constant="3" id="XFf-Id-PeM"/>
+                            <constraint firstItem="Tlw-gY-NZd" firstAttribute="top" secondItem="shQ-ZH-qwD" secondAttribute="bottom" constant="3" id="Xzc-fD-la3"/>
+                            <constraint firstItem="shQ-ZH-qwD" firstAttribute="top" secondItem="MJh-r1-X6l" secondAttribute="bottom" constant="8" id="g4o-TX-XO2"/>
+                            <constraint firstItem="ba2-Nb-oTZ" firstAttribute="top" secondItem="MJh-r1-X6l" secondAttribute="bottom" constant="8" id="giV-qf-Sfr"/>
                             <constraint firstItem="Tlw-gY-NZd" firstAttribute="leading" secondItem="6Lx-SH-EFw" secondAttribute="leading" id="hjc-HT-Zna"/>
-                            <constraint firstItem="Ilq-mk-6qB" firstAttribute="top" secondItem="MJh-r1-X6l" secondAttribute="bottom" constant="10" id="qnm-td-Y0a"/>
+                            <constraint firstItem="6Lx-SH-EFw" firstAttribute="trailing" secondItem="shQ-ZH-qwD" secondAttribute="trailing" constant="10" id="jMe-SN-rsc"/>
                             <constraint firstItem="Tlw-gY-NZd" firstAttribute="trailing" secondItem="6Lx-SH-EFw" secondAttribute="trailing" id="ver-P1-51w"/>
-                            <constraint firstItem="Ilq-mk-6qB" firstAttribute="leading" secondItem="6Lx-SH-EFw" secondAttribute="leading" constant="10" id="xXR-5F-N5i"/>
                             <constraint firstAttribute="bottom" secondItem="Tlw-gY-NZd" secondAttribute="bottom" id="xq8-aa-pha"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Lx-SH-EFw"/>
                     </view>
                     <connections>
+                        <outlet property="sortNumberButton" destination="ba2-Nb-oTZ" id="QPs-Ds-YKe"/>
+                        <outlet property="sortTriesButton" destination="shQ-ZH-qwD" id="6sH-hm-DBa"/>
                         <outlet property="tableView" destination="Tlw-gY-NZd" id="PxT-dC-YlW"/>
                     </connections>
                 </viewController>

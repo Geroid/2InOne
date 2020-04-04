@@ -51,7 +51,11 @@ class SimpleGameViewController: UIViewController {
             self.present(alert, animated: true)
             return
         }
-        records.addResult(game1.checkInputNumber(inputNumber: usersNumb, alert: alert, triesLabel: triesCount))
+        guard let result = game1.checkInputNumber(inputNumber: usersNumb, alert: alert, triesLabel: triesCount) else {
+            self.present(alert, animated: true)
+            return
+        }
+        records.addResult(gameType: .game1, results: result)
         self.present(alert, animated: true)
     }
     

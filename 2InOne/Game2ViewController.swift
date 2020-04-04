@@ -63,7 +63,6 @@ class Game2ViewController: UIViewController {
         startGame2()
     }
     
-    
     static func instantiate() -> Game2ViewController {
         return UIStoryboard(name: "Game2", bundle: nil)
             .instantiateViewController(withIdentifier: "Game2ViewController") as! Game2ViewController
@@ -90,11 +89,11 @@ class Game2ViewController: UIViewController {
         )
         let omgAction = UIAlertAction(title: "OMG", style: .default)
         { action in
-            self.records.addResult(self.gameResults)
+            self.records.addResult(gameType: .game2, results: self.gameResults)
         }
         let restartAction = UIAlertAction(title: "Restart",style: .default)
         { action in
-            self.records.addResult(self.gameResults)
+            self.records.addResult(gameType: .game2, results: self.gameResults)
             self.restartGame2()
         }
         alert.addAction(omgAction)
