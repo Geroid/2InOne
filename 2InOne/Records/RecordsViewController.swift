@@ -75,7 +75,6 @@ extension RecordsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
-        
         guard let recs = recordItems else {
             return UITableViewCell()
         }

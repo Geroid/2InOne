@@ -55,6 +55,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92543DAF24386FB20091EA83 /* Game2 */ = {
+			isa = PBXGroup;
+			children = (
+				E727A6872423BB9B00E9BE5B /* Game2.storyboard */,
+				E727A68B242412E300E9BE5B /* Game2ViewController.swift */,
+			);
+			path = Game2;
+			sourceTree = "<group>";
+		};
+		92543DB024386FF70091EA83 /* Game1 */ = {
+			isa = PBXGroup;
+			children = (
+				E76943CC2422BF3600CABAB0 /* SimpleGame.xib */,
+				922E7CF224290ACB002FCE2F /* SimpleGameViewController.swift */,
+				920B4E082428FADD0013B604 /* Game1.swift */,
+			);
+			path = Game1;
+			sourceTree = "<group>";
+		};
+		92543DB1243870180091EA83 /* Records */ = {
+			isa = PBXGroup;
+			children = (
+				92F6B33C242E4F9600ADC3A5 /* Records.storyboard */,
+				92F6B342242E50AC00ADC3A5 /* RecordsViewController.swift */,
+			);
+			path = Records;
+			sourceTree = "<group>";
+		};
+		92543DB2243870460091EA83 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				928AC85824322EA50083B6CE /* RecordsService.swift */,
+				9224176E2437CCC5004C6258 /* GameResult.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		E76943AA2422BAB600CABAB0 = {
 			isa = PBXGroup;
 			children = (
@@ -74,22 +111,17 @@
 		E76943B52422BAB600CABAB0 /* 2InOne */ = {
 			isa = PBXGroup;
 			children = (
+				92543DB024386FF70091EA83 /* Game1 */,
+				92543DAF24386FB20091EA83 /* Game2 */,
+				92543DB1243870180091EA83 /* Records */,
+				92543DB2243870460091EA83 /* Services */,
 				E76943BC2422BAB600CABAB0 /* Main.storyboard */,
 				E76943C12422BABB00CABAB0 /* LaunchScreen.storyboard */,
-				E76943CC2422BF3600CABAB0 /* SimpleGame.xib */,
-				E727A6872423BB9B00E9BE5B /* Game2.storyboard */,
-				92F6B33C242E4F9600ADC3A5 /* Records.storyboard */,
-				922E7CF224290ACB002FCE2F /* SimpleGameViewController.swift */,
 				E76943BA2422BAB600CABAB0 /* ViewController.swift */,
-				E727A68B242412E300E9BE5B /* Game2ViewController.swift */,
 				E76943B62422BAB600CABAB0 /* AppDelegate.swift */,
 				E76943B82422BAB600CABAB0 /* SceneDelegate.swift */,
 				E76943BF2422BABB00CABAB0 /* Assets.xcassets */,
 				E76943C42422BABB00CABAB0 /* Info.plist */,
-				920B4E082428FADD0013B604 /* Game1.swift */,
-				92F6B342242E50AC00ADC3A5 /* RecordsViewController.swift */,
-				928AC85824322EA50083B6CE /* RecordsService.swift */,
-				9224176E2437CCC5004C6258 /* GameResult.swift */,
 			);
 			path = 2InOne;
 			sourceTree = "<group>";
