@@ -46,4 +46,20 @@ class RecordsService {
 //        }
         return GameResults[gameType]!
     }
+    
+    func sortNumberDescendingOrder(_ results: [GameResult]) -> [GameResult]{
+        var sortedArray = results
+        sortedArray.sort {
+            $0.number > $1.number
+        }
+        return sortedArray
+    }
+    
+    func sortTriesDescendingOrder(_ results: [GameResult]) -> [GameResult]{
+        var sortedArray = results
+        sortedArray.sort {
+            $0.tries > $1.tries
+        }
+        return sortedArray
+    }
 }

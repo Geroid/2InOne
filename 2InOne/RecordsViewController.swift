@@ -56,10 +56,12 @@ class RecordsViewController: UIViewController, UITableViewDelegate {
     }
     
     @IBAction func didTouchSortNumber(_ sender: UIButton) {
+        recordItems = Games.records.sortNumberDescendingOrder(recordItems ?? [])
         tableView.reloadData()
     }
     
     @IBAction func didTouchSortTries(_ sender: UIButton) {
+        recordItems = Games.records.sortTriesDescendingOrder(recordItems ?? [])
         tableView.reloadData()
     }
 }
