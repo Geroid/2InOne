@@ -8,57 +8,46 @@
 
 import Foundation
 
-enum GameType {
+enum GameType: String, Codable {
     case game1
     case game2
 }
 
 class RecordsService {
     
+    typealias GameResults = [GameType:[GameResult]]
+    
     // MARK: Properties
     static var shared = RecordsService()
-    private var GameResults: [GameType: [GameResult]] = [.game1: [], .game2: []]
     
     private init() {}
     
     // MARK: Public funcs
     func addResult (gameType: GameType, results: GameResult) {
-        guard GameResults[gameType] != nil else {
-            return
+        var gameResults = allResults()
+        if gameResults[gameType] != nil {
+            gameResults[gameType]?.append(results)
+        } else {
+            gameResults[gameType] = [results]
         }
-        GameResults[gameType]!.append(results)
+        
         let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(GameResults[gameType]!){
+        if let encoded = try? encoder.encode(gameResults){
             let defaults = UserDefaults.standard
-            print(encoded)
             defaults.set(encoded, forKey: "SavedResults")
             defaults.synchronize()
+            
+            let stringJSON = String(data: encoded, encoding: .utf8)
+            print(stringJSON ?? "")
         } else {
             print("Error")
         }
-
+        
     }
+    
     func results(_ gameType: GameType) -> [GameResult] {
-//        guard GameResults[gameType] != nil else {
-//            return []
-//        }
-//        let res = GameResults[gameType]!
-        let defaults = UserDefaults.standard
-        guard let savedResults = defaults.object(forKey: "SavedResults") as? Data else {
-            return []
-        }
-        print(savedResults)
-        let decoder = JSONDecoder()
-        if let loadedResult = try? decoder.decode([GameResult].self, from: savedResults){
-            print (loadedResult)
-            return loadedResult
-        }
-//        guard let loadedResults = decoder.decode(GameResults[gameType]!, from: savedResults) else {
-//            return []
-//        }
-//        return GameResults[gameType]!
-//        return loadedResults
-        return []
+        let loadedResult = allResults()
+        return loadedResult[gameType] ?? []
     }
     
     func sortNumberDescendingOrder(_ results: [GameResult]) -> [GameResult]{
@@ -75,5 +64,20 @@ class RecordsService {
             $0.tries > $1.tries
         }
         return sortedArray
+    }
+    
+    // MARK: Private funcs
+    private func allResults() -> GameResults {
+        let defaults = UserDefaults.standard
+        guard let savedResults = defaults.object(forKey: "SavedResults") as? Data else{
+            return GameResults()
+        }
+        
+        let decoder = JSONDecoder()
+        guard let loadedResult = try? decoder.decode(GameResults.self, from: savedResults) else {
+            return GameResults()
+        }
+        
+        return loadedResult
     }
 }
