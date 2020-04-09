@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game2 View Controller-->
+        <scene sceneID="RdU-HC-M4y">
+            <objects>
+                <viewController storyboardIdentifier="Game2ViewController" id="7dI-Yx-h7m" customClass="Game2ViewController" customModule="_InOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sWv-O8-ini">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game2Screen" translatesAutoresizingMaskIntoConstraints="NO" id="YW7-fd-pn5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="nw0-a0-GM2">
+                                <rect key="frame" x="0.0" y="64" width="414" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCw-1h-Zoa">
+                                <rect key="frame" x="0.0" y="188" width="414" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Greater"/>
+                                <connections>
+                                    <action selector="didTouchGreeter:" destination="7dI-Yx-h7m" eventType="touchUpInside" id="mkt-lK-epL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6R-Hq-0D2">
+                                <rect key="frame" x="0.0" y="250" width="414" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Less"/>
+                                <connections>
+                                    <action selector="didTouchLess:" destination="7dI-Yx-h7m" eventType="touchUpInside" id="uiG-hO-TUs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thc-zX-Mya">
+                                <rect key="frame" x="0.0" y="312" width="414" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Right!"/>
+                                <connections>
+                                    <action selector="didTouchRight:" destination="7dI-Yx-h7m" eventType="touchUpInside" id="R7h-UM-t9o"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tries" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="dWx-gv-SFd">
+                                <rect key="frame" x="0.0" y="126" width="414" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dWx-gv-SFd" firstAttribute="top" secondItem="nw0-a0-GM2" secondAttribute="bottom" constant="32" id="2SD-8p-Dmz"/>
+                            <constraint firstItem="dWx-gv-SFd" firstAttribute="leading" secondItem="ESB-bi-OEL" secondAttribute="leading" id="Azd-WW-pEl"/>
+                            <constraint firstItem="YW7-fd-pn5" firstAttribute="trailing" secondItem="ESB-bi-OEL" secondAttribute="trailing" id="BX0-AZ-Wws"/>
+                            <constraint firstItem="ESB-bi-OEL" firstAttribute="trailing" secondItem="thc-zX-Mya" secondAttribute="trailing" id="Bhj-rm-u3H"/>
+                            <constraint firstItem="thc-zX-Mya" firstAttribute="leading" secondItem="ESB-bi-OEL" secondAttribute="leading" id="Jf3-LU-rOk"/>
+                            <constraint firstItem="ESB-bi-OEL" firstAttribute="trailing" secondItem="Y6R-Hq-0D2" secondAttribute="trailing" id="MBf-4g-hac"/>
+                            <constraint firstItem="Y6R-Hq-0D2" firstAttribute="top" secondItem="rCw-1h-Zoa" secondAttribute="bottom" constant="20" id="RJ0-Bh-Rai"/>
+                            <constraint firstItem="nw0-a0-GM2" firstAttribute="top" secondItem="ESB-bi-OEL" secondAttribute="top" constant="20" id="VNg-il-5bP"/>
+                            <constraint firstItem="Y6R-Hq-0D2" firstAttribute="leading" secondItem="ESB-bi-OEL" secondAttribute="leading" id="ViF-UI-yuW"/>
+                            <constraint firstItem="rCw-1h-Zoa" firstAttribute="top" secondItem="dWx-gv-SFd" secondAttribute="bottom" constant="32" id="bES-1d-hCd"/>
+                            <constraint firstItem="ESB-bi-OEL" firstAttribute="trailing" secondItem="nw0-a0-GM2" secondAttribute="trailing" id="bNm-BM-SwB"/>
+                            <constraint firstItem="YW7-fd-pn5" firstAttribute="top" secondItem="sWv-O8-ini" secondAttribute="top" id="gfS-4V-rov"/>
+                            <constraint firstItem="nw0-a0-GM2" firstAttribute="leading" secondItem="ESB-bi-OEL" secondAttribute="leading" id="hGY-wr-XIS"/>
+                            <constraint firstItem="ESB-bi-OEL" firstAttribute="trailing" secondItem="rCw-1h-Zoa" secondAttribute="trailing" id="iwp-Lg-jUF"/>
+                            <constraint firstItem="YW7-fd-pn5" firstAttribute="leading" secondItem="ESB-bi-OEL" secondAttribute="leading" id="oSJ-2t-87e"/>
+                            <constraint firstItem="thc-zX-Mya" firstAttribute="top" secondItem="Y6R-Hq-0D2" secondAttribute="bottom" constant="20" id="sGK-jl-LoQ"/>
+                            <constraint firstAttribute="bottom" secondItem="YW7-fd-pn5" secondAttribute="bottom" id="spV-Pb-HPb"/>
+                            <constraint firstItem="rCw-1h-Zoa" firstAttribute="leading" secondItem="ESB-bi-OEL" secondAttribute="leading" id="vEN-vD-jzT"/>
+                            <constraint firstItem="dWx-gv-SFd" firstAttribute="trailing" secondItem="ESB-bi-OEL" secondAttribute="trailing" id="wCx-T3-gaA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ESB-bi-OEL"/>
+                    </view>
+                    <connections>
+                        <outlet property="greaterButton" destination="rCw-1h-Zoa" id="QJw-iK-662"/>
+                        <outlet property="lessButton" destination="Y6R-Hq-0D2" id="PR6-67-5wo"/>
+                        <outlet property="rightButton" destination="thc-zX-Mya" id="ztE-Ex-mCh"/>
+                        <outlet property="triesLabel" destination="dWx-gv-SFd" id="EbY-Wz-dJY"/>
+                        <outlet property="usersNumberLabel" destination="nw0-a0-GM2" id="cdy-W9-JCO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X4X-bQ-u7H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="game2Screen" width="1920" height="2905"/>
+    </resources>
+</document>

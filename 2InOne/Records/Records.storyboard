@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Records-->
+        <scene sceneID="3Vg-jl-ziK">
+            <objects>
+                <viewController storyboardIdentifier="RecordsViewController" title="Records" id="9ue-Ey-9W4" customClass="RecordsViewController" customModule="_InOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o7S-yW-ZcF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MJh-r1-X6l">
+                                <rect key="frame" x="10" y="54" width="394" height="32"/>
+                                <segments>
+                                    <segment title="Game 1"/>
+                                    <segment title="Game 2"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.0" green="0.78039215689999997" blue="0.43068628079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="gameDidChange:" destination="9ue-Ey-9W4" eventType="valueChanged" id="IBq-7e-fJl"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tlw-gY-NZd">
+                                <rect key="frame" x="0.0" y="126" width="414" height="770"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="3oj-Z3-rcp">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3oj-Z3-rcp" id="3lq-r2-Wfc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba2-Nb-oTZ">
+                                <rect key="frame" x="10" y="93" width="89" height="30"/>
+                                <state key="normal" title="Sort Number"/>
+                                <connections>
+                                    <action selector="didTouchSortNumber:" destination="9ue-Ey-9W4" eventType="touchUpInside" id="eXx-kL-LgM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shQ-ZH-qwD">
+                                <rect key="frame" x="337" y="93" width="67" height="30"/>
+                                <state key="normal" title="Sort Tries"/>
+                                <connections>
+                                    <action selector="didTouchSortTries:" destination="9ue-Ey-9W4" eventType="touchUpInside" id="1g2-PO-Ahn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Lx-SH-EFw" firstAttribute="trailing" secondItem="MJh-r1-X6l" secondAttribute="trailing" constant="10" id="3n6-ab-KGt"/>
+                            <constraint firstItem="ba2-Nb-oTZ" firstAttribute="leading" secondItem="6Lx-SH-EFw" secondAttribute="leading" constant="10" id="4yO-YB-e5A"/>
+                            <constraint firstItem="MJh-r1-X6l" firstAttribute="top" secondItem="6Lx-SH-EFw" secondAttribute="top" constant="10" id="JB0-eV-v28"/>
+                            <constraint firstItem="MJh-r1-X6l" firstAttribute="leading" secondItem="6Lx-SH-EFw" secondAttribute="leading" constant="10" id="ToL-M1-jdg"/>
+                            <constraint firstItem="Tlw-gY-NZd" firstAttribute="top" secondItem="ba2-Nb-oTZ" secondAttribute="bottom" constant="3" id="XFf-Id-PeM"/>
+                            <constraint firstItem="Tlw-gY-NZd" firstAttribute="top" secondItem="shQ-ZH-qwD" secondAttribute="bottom" constant="3" id="Xzc-fD-la3"/>
+                            <constraint firstItem="shQ-ZH-qwD" firstAttribute="top" secondItem="MJh-r1-X6l" secondAttribute="bottom" constant="8" id="g4o-TX-XO2"/>
+                            <constraint firstItem="ba2-Nb-oTZ" firstAttribute="top" secondItem="MJh-r1-X6l" secondAttribute="bottom" constant="8" id="giV-qf-Sfr"/>
+                            <constraint firstItem="Tlw-gY-NZd" firstAttribute="leading" secondItem="6Lx-SH-EFw" secondAttribute="leading" id="hjc-HT-Zna"/>
+                            <constraint firstItem="6Lx-SH-EFw" firstAttribute="trailing" secondItem="shQ-ZH-qwD" secondAttribute="trailing" constant="10" id="jMe-SN-rsc"/>
+                            <constraint firstItem="Tlw-gY-NZd" firstAttribute="trailing" secondItem="6Lx-SH-EFw" secondAttribute="trailing" id="ver-P1-51w"/>
+                            <constraint firstAttribute="bottom" secondItem="Tlw-gY-NZd" secondAttribute="bottom" id="xq8-aa-pha"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Lx-SH-EFw"/>
+                    </view>
+                    <connections>
+                        <outlet property="sortNumberButton" destination="ba2-Nb-oTZ" id="QPs-Ds-YKe"/>
+                        <outlet property="sortTriesButton" destination="shQ-ZH-qwD" id="6sH-hm-DBa"/>
+                        <outlet property="tableView" destination="Tlw-gY-NZd" id="PxT-dC-YlW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GSj-pj-kzP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.92753623188406" y="79.6875"/>
+        </scene>
+    </scenes>
+</document>
