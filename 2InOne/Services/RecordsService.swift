@@ -27,24 +27,38 @@ class RecordsService {
             return
         }
         GameResults[gameType]!.append(results)
-//        Не работало...
-//        resDict.updateValue(resutls.number, forKey: resutls.tries)
-//        let defaults = UserDefaults.standard
-//        defaults.set(resDict, forKey: "User Results")
-//        defaults.synchronize()
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(GameResults[gameType]!){
+            let defaults = UserDefaults.standard
+            print(encoded)
+            defaults.set(encoded, forKey: "SavedResults")
+            defaults.synchronize()
+        } else {
+            print("Error")
+        }
+
     }
     func results(_ gameType: GameType) -> [GameResult] {
-        guard GameResults[gameType] != nil else {
+//        guard GameResults[gameType] != nil else {
+//            return []
+//        }
+//        let res = GameResults[gameType]!
+        let defaults = UserDefaults.standard
+        guard let savedResults = defaults.object(forKey: "SavedResults") as? Data else {
             return []
         }
-//        let defaults = UserDefaults.standard
-//        guard let savedResults = defaults.object(forKey: "User Results") as? [GameResult] else {
-//            var error = GameResult()
-//            error.number = -1
-//            error.tries = -1
-//            return [error]
+        print(savedResults)
+        let decoder = JSONDecoder()
+        if let loadedResult = try? decoder.decode([GameResult].self, from: savedResults){
+            print (loadedResult)
+            return loadedResult
+        }
+//        guard let loadedResults = decoder.decode(GameResults[gameType]!, from: savedResults) else {
+//            return []
 //        }
-        return GameResults[gameType]!
+//        return GameResults[gameType]!
+//        return loadedResults
+        return []
     }
     
     func sortNumberDescendingOrder(_ results: [GameResult]) -> [GameResult]{

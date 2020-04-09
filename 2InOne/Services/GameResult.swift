@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct GameResult {
+struct GameResult: Codable {
     
     var number = 0
     var tries = 0
-
+    
 }
